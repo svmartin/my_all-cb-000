@@ -8,7 +8,7 @@ def my_all?(collection)
     yield(collection[i])
     i += 1
   end
-  block_return_values.all? { |value| value == true }
+  block_return_values.include?(false) ? false : true
 end
 
 p my_all?([1, 2, 3, 4, 5, 6]) { |num| num.even? }
