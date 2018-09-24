@@ -10,3 +10,5 @@ def my_all?(collection)
   end
   block_return_values.all?(true)
 end
+
+p my_all?([1, 2, 3, 4, 5, 6]) { |num| num.even? }
